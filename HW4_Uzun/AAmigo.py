@@ -102,7 +102,7 @@ def protein_length(*seqs: str):
     return lengths
 
 
-    def essential_amino_acids(*seqs: str):
+def essential_amino_acids(*seqs: str):
     """
 
     Calculate the number of essential amino acids based on its amino acids sequence.
