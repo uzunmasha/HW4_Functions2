@@ -1,65 +1,72 @@
-# HW 4. Functions 2
-> *This is the repo for the fourth homework of the BI Python 2023 course*
+# AAmigo
+This readme describes the user-friendly program AAmigo for performing various operations with amino acid sequences.
 
-### Homework description
+AAmigo can perform different operations:
+* Calculate the mass of a protein.
+* Calculate the ratio of amino acids with different polarities in a protein
+* Find for a particular amino acid(s) in the entire sequence
+* Calculate amino acid's occurrence in a sequence
+* Кристинина
+* Кристинина
 
-На прошлой неделе вы делали утилиту для работы с последовательностями нуклеиновых кислот (с весьма строгим ТЗ). Пришло время для чего-то более самостоятельного. 
+## Usage
+1. Clone this repo using SSH or HTTPS:
+```bash
+git clone git@github.com:uzunmasha/HW4_Functions2.git
+``` 
+**or**
+```bash
+git clone https://github.com/uzunmasha/HW4_Functions2.git
+``` 
+2. Launch the program with the required function (listed below)
+3. Enjoy your results
 
-#### Основное задание
+## List of functions:
+For all functions, amino acids in the string should be indicated as one-letter symbols. Letters can be uppercase or lowercase.
 
+### aa_substring 
+This function searches for the presence of particular amino acid(s) in the entire amino acid sequence. As input, it takes a string of amino acids and a substring that needs to be found. All sequences and subsequence should be comma-separated. Any number of amino acid sequences is possible. The searched substring should be one and it should be pointed last.  As an output, the function returns the position in the original sequence where the searched element was found for the first time.
+Usage example:
+```python
+aa_tools('RNwDeACEQEZ', 'E','aa_substring') #4
+aa_tools('RNwDeACEQEZ', 'DFKAaaE','A','aa_substring') #[5, 3]
+```
+### aa_count
+This function finds how many times a particular amino acid or sequence of several amino acids occurs in the original sequence. As input, it takes a string of amino acids and a substring that needs to be counted. All sequences and subsequence should be comma-separated. Any number of amino acid sequences is possible. The searched substring should be one and it should be pointed last. As an output, the function returns the count of searched amino acid(s).
+Usage example:
+```python
+aa_tools('GHcLfKF','f','aa_count') #2
+aa_tools('HILAKMaF', 'GDaKFAAE','A','aa_count') #[2, 3]
+```
 
-Напишите утилиту для работы с последовательностями белков. Там должно быть минимум 5 различных операций, должна быть какая-то точка входа через которую пользователь будет всё это дело использовать. На этом, по сути, всё. Всё целиком зависит от вашей фантазии и креативности. Можете опираться на ДЗ №2 и №3. 
+###
+Части Маши и Кристины
 
-Самая главная часть задания - это файл `README.md`. Сделайте краткое введение, напишите описание тула, приведите документацию по использованию со списком аргументов. Добавьте примеры использования. Возможно, вы захотите сделать секцию Troubleshooting. ***Почему это нужно?*** В этот раз проверяющий не будет знать того, как должен работать ваш тул. Это ваш авторский код. Даже самая прекрасная функциональность, не будучи отраженной в README, скорее всего останется незамеченной. README - это ваш способ познакомить пользователя с тулом, показать всё лучше и обосновать, почему именно ваша команда должна получить наивысший балл. 
+**Пример использования**
 
-Есть люди которые, любят писать документации, а есть те - кто не любит. Найдите в вашей команде того, кто любит. И в будущем в своих рабочих проектах всегда держите рядом такого человек (или будьте им). 
+```python
+protein_mass('MARY') #593 (в Дальтонах)
+aa_profile('EEKFG') #{'hydrophobic': 0.4, 'polar': 0.0, '- charged': 0.4, '+ charged': 0.2}
+```
 
-Примеры некоторых README, которыми можно вдохновляться:
+## Troubleshooting
+* In function `'aa_substring'` the position counting starts at 0, so don't be confused if the second element in the sequence has the output [1]. 
+* In functions `'aa_substring'` and `'aa_count'` [-1] means that there is no such element in the sequence.
+* In functions `'aa_substring'` and `'aa_count'` the error message "name '..' is not defined" means that the given argument is not quoted in the input string.
 
-- [MetaFX](https://github.com/ctlab/metafx), тул Артёма Иванова. Там еще и [wiki](https://github.com/ctlab/metafx/wiki) крутое.
-- [samovar](https://github.com/nvaulin/samovar)
-- [MetaGEM](https://github.com/franciscozorrilla/metaGEM)
-- [Pharokka](https://github.com/gbouras13/pharokka)
+## Developers and contacts
+* Maria Uzun - contributed to `'aa_substring'`, `'aa_count'` and `aa_tools` functions.
+* Maria Babaeva - contributed to `'protein_mass'` and `'aa_profile'` functions.
+* Kristina Zhur - contributed to ... functions
+* Julia the Cat - team's emotional support
 
-Типовые секции, на которые стоит обратить внимание: Title, Overview, Usage, Options, Examples, Troubleshooting, Contacts.
+All team members contributed to README file according to the functions they developed.
 
-**Tехническое требование к заданию.**
+*Team's photo*
 
-Это задание будет выполняться в командах по 3 человека. Каждый из членов команды должен внести <ins>***как минимум***</ins> 2 функции. Каждое внесение функции должно сопровождаться коммитом с осмысленным описанием коммита. Ниже приведена последовательность действий для успешного выполнения задания (аналогично ДЗ №2):
+In case of non-working code:
 
-1. Посмотрите состав своей команды здесь ([**ССЫЛКА**](https://docs.google.com/spreadsheets/d/1KMBBBu8LqauRpDJb0v1ldPwpvzNn8-KakcHexAcqLsE/edit?usp=sharing)). 
-2. Тимлид делает форк данного репозитория. **В форке создает ветку `HW4_<surname>`, в ветке создает папку `HW4_<surname>`, в этой папке вы всё делаете.**
-3. Члены команды могут либо делать свои форки, либо работать в репозитории тимлида в качестве колабораторов ("contributors"). В любом случае делаете клоны => пишите код локально => пушите.
-4. В конце тимлид делайет pull-request из `HW4_<surname>` своего репозитория в `main` этого.
-
-
-А также:
-- Сопроводите программу лучшим `README.md` файлом в вашей жизни (на английском языке).
-- В этом ДЗ проблемы с качеством кода (нейминги, пустые строки, анноатции типов, док.стринги, пробелы) могут привести к снижению балла. Воспользуйтесь линтерами чтобы себя обезопасить. IDE по типу PyCharm или VSCode имеют фунцонал по авто-исправлению многих проблем такого рода. 
-
-Автотестов на GitHub в этом ДЗ нет, но вы можете прогнать линтеры на качество кода локально (как в ДЗ №3, подробнее читайте [тут](https://plausible-cannon-091.notion.site/Code-auto-checks-02b2ea69c1d545fca07b50ce5933ed5f?pvs=4)). 
-
-- Программа должна сохранять регистр символов.
-- Программа должна работать только с последовательностями белков.
-- Запрещается использование сторонних модулей.
-
-
-### Форма сдачи
-
-Прикрепите ссылку на pull-request тимлида в Google Class (можете сделать от лица каждого члена команды, но это не обязательно).
-
-
-### Pазбалловка
-
-- За каждую из 5 операций - максимум **1.5 балла**
-- За README - максимум **2.5 балла**
-- Если вы не внесли как минимум 2 функции от себя, вы получаете 0 баллов (на баллы остальных членов команды это не влияет).
-- За фото созвона в README можно получить 0.2 доп. балла (но не более 10 баллов суммарно)
-
-
-
-### **Предполагаемый учебный результат**
-
-Это задание позволит вам проявить креативность и учиться быть не только кодером, но и автором. Также это задание поможет окончательно закрепить материал по функциям который мы прошли.
-
-Удачи! ✨✨
+* Please blame the one who has the paws
+* Report any problems directly to the GitHub issue tracker
+or
+* Send your feedback to uzunmasha@gmail.com
