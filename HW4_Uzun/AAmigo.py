@@ -41,7 +41,7 @@ def aa_profile(seq: str):
     return profile
 
 
-def aa_substring(seq: str):
+def amino_acid_substring(seq: str):
     """
 
     Searches for a substring of amino acids in the entire amino acid sequence.
@@ -64,7 +64,7 @@ def aa_substring(seq: str):
     return results
 
 
-def aa_count(seq: str):
+def amino_acid_count(seq: str):
     """
 
     Finds how many times a particular sequence(s) occurs in the original one.
@@ -158,11 +158,11 @@ def aa_tools(*args):
             result = aa_profile(sequence)
             results.append(result)
 
-        if operation == "aa_substring":
+        if operation == "amino_acid_substring":
             result = aa_substring(seq)
             return result
 
-        if operation == "aa_count":
+        if operation == "amino_acid_count":
             result = aa_count(seq)
             return result
 
