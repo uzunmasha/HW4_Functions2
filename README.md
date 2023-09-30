@@ -63,7 +63,7 @@ aa_tools("KKNNfF", "KKFFRRVV", "KK", 'essential_amino_acids') #[['K', 'K', 'f', 
 
 ## Troubleshooting
 * In function `'aa_substring'` the position counting starts at 0, so don't be confused if the second element in the sequence has the output [1]. 
-* In functions `'aa_substring'` and `'aa_count'` [-1] means that there is no such element in the sequence.
+* In functions `'aa_substring'` and `'aa_count'` output [-1] means that there is no such element in the sequence.
 * In functions `'aa_substring'` and `'aa_count'` the error message "name '..' is not defined" means that the given argument is not quoted in the input string.
 
 ## Bibliography
