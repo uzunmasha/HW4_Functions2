@@ -33,19 +33,19 @@ aa_profile('EEKFG') #{'hydrophobic': 0.4, 'polar': 0.0, '- charged': 0.4, '+ cha
 ```
 ### aa_profile
 
-### aa_substring 
+### amino_acid_substring 
 This function searches for the presence of particular amino acid(s) in the entire amino acid sequence. As input, it takes a string of amino acids and a substring that needs to be found. All sequences and subsequence should be comma-separated. Any number of amino acid sequences is possible. The searched substring should be one and it should be pointed last.  As an output, the function returns the position in the original sequence where the searched element was found for the first time.
 Usage example:
 ```python
-aa_tools('RNwDeACEQEZ', 'E','aa_substring') #4
-aa_tools('RNwDeACEQEZ', 'DFKAaaE','A','aa_substring') #[5, 3]
+aa_tools('RNwDeACEQEZ', 'E','amino_acid_substring') #4
+aa_tools('RNwDeACEQEZ', 'DFKAaaE','A','amino_acid_substring') #[5, 3]
 ```
-### aa_count
+### amino_acid_count
 This function finds how many times a particular amino acid or sequence of several amino acids occurs in the original sequence. As input, it takes a string of amino acids and a substring that needs to be counted. All sequences and subsequence should be comma-separated. Any number of amino acid sequences is possible. The searched substring should be one and it should be pointed last. As an output, the function returns the count of searched amino acid(s).
 Usage example:
 ```python
-aa_tools('GHcLfKF','f','aa_count') #2
-aa_tools('HILAKMaF', 'GDaKFAAE','A','aa_count') #[2, 3]
+aa_tools('GHcLfKF','f','amino_acid_count') #2
+aa_tools('HILAKMaF', 'GDaKFAAE','A','amino_acid_count') #[2, 3]
 ```
 ### protein_length
 This function can analyze an aminoacid sequence and gives a length of it (number of amino acids). Any number of amino acid sequences is possible. All sequences should be comma-separated. As input, it takes a string or strings of amino acids, as an output, the function returns the length of each protein.
@@ -62,15 +62,15 @@ aa_tools("KKNNfF", "KKFFRRVV", "KK", 'essential_amino_acids') #[['K', 'K', 'f', 
 ```
 
 ## Troubleshooting
-* In function `'aa_substring'` the position counting starts at 0, so don't be confused if the second element in the sequence has the output [1]. 
-* In functions `'aa_substring'` and `'aa_count'` output [-1] means that there is no such element in the sequence.
-* In functions `'aa_substring'` and `'aa_count'` the error message "name '..' is not defined" means that the given argument is not quoted in the input string.
+* In function `'amino_acid_substring'` the position counting starts at 0, so don't be confused if the second element in the sequence has the output [1]. 
+* In functions `'amino_acid_substring'` and `'amino_acid_count'` output [-1] means that there is no such element in the sequence.
+* In functions `'amino_acid_substring'` and `'amino_acid_count'` the error message "name '..' is not defined" means that the given argument is not quoted in the input string.
 
 ## Bibliography
 [1] Wu G. Amino acids: metabolism, functions, and nutrition. Amino Acids. 2009 May;37(1):1-17. doi: 10.1007/s00726-009-0269-0.
 
 ## Developers and contacts
-* Maria Uzun - contributed to `'aa_substring'`, `'aa_count'`, and `'aa_tools'` functions.
+* Maria Uzun - contributed to `'amino_acid_substring'`, `'amino_acid_count'`, and `'aa_tools'` functions.
 * Maria Babaeva - contributed to `'protein_mass'` and `'aa_profile'` functions.
 * Kristina Zhur - contributed to `'protein_length'` and `'essential_amino_acids'` functions.
 * Julia the Cat - team's emotional support.
