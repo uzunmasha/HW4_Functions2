@@ -51,14 +51,14 @@ aa_tools('HILAKMaF', 'GDaKFAAE','A','amino_acid_count') #[2, 3]
 This function can analyze an aminoacid sequence and gives a length of it (number of amino acids). Any number of amino acid sequences is possible. All sequences should be comma-separated. As input, it takes a string or strings of amino acids, as an output, the function returns the length of each protein.
 Usage example:
 ```python
-aa_tools("KKNNfF", "KKFFRRVV", "KK", 'protein_length') #[6, 8, 2]
+aa_tools('KKNNfF', 'KKFFRRVV', 'KK', 'protein_length') #[6, 8, 2]
 ```
 ### essential_amino_acids
 This function can analyze an amino acid sequence and gives a list of essential amino acids that are present in the sequence.
 Any number of amino acid sequences is possible. All sequences should be comma-separated. As input, it takes a string or strings of amino acids, as an output, the function returns essential amino acids for each sequence.
 Usage example:
 ```python
-aa_tools("KKNNfF", "KKFFRRVV", "KK", 'essential_amino_acids') #[['K', 'K', 'f', 'F'], ['K', 'K', 'F', 'F', 'V', 'V'], ['K', 'K']]
+aa_tools('KKNNfF', 'KKFFRRVV', 'KK', 'essential_amino_acids') #[['K', 'K', 'f', 'F'], ['K', 'K', 'F', 'F', 'V', 'V'], ['K', 'K']]
 ```
 
 ## Troubleshooting
