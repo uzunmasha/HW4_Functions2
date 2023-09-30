@@ -86,7 +86,7 @@ def amino_acid_count(seq: str):
         results.append(amino_acid_count)
     return results
 
-def protein_length(*seqs: str):
+def protein_length(*seq: str):
     """
 
     Calculate the length (number of amino acids) of a protein.
@@ -96,13 +96,13 @@ def protein_length(*seqs: str):
     """
     lengths = []
 
-    for seq in seqs:
-        lengths.append(len(seq))
+    for sequences in seq:
+        lengths.append(len(sequences))
 
     return lengths
 
 
-def essential_amino_acids(*seqs: str):
+def essential_amino_acids(*seq: str):
     """
 
     Calculate the number of essential amino acids based on its amino acids sequence.
@@ -113,9 +113,9 @@ def essential_amino_acids(*seqs: str):
     eaa_dictionary = ['H', 'I', 'K', 'L', 'M', 'F', 'T', 'W', 'V', 'h', 'i', 'k', 'l', 'm', 'f', 't', 'w', 'v']
     eaa_list = []
 
-    for seq in seqs:
+    for sequences in seq:
         eaa_seq = []
-        for amino_acid in seq:
+        for amino_acid in sequences:
             if amino_acid in eaa_dictionary:
                 eaa_seq.append(amino_acid)
         eaa_list.append(eaa_seq)
