@@ -154,16 +154,16 @@ def aa_tools(*args):
             result = protein_mass(sequence)
             results.append(result)
 
-        elif operation == "aa_profile":
-            result = aa_profile(sequence)
+        elif operation == "amino_acid_profile":
+            result = amino_acid_profile(sequence)
             results.append(result)
 
         if operation == "amino_acid_substring":
-            result = aa_substring(seq)
+            result = amino_acid_substring(seq)
             return result
 
         if operation == "amino_acid_count":
-            result = aa_count(seq)
+            result = amino_acid_count(seq)
             return result
 
         if operation == "protein_length":
