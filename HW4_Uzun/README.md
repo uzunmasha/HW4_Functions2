@@ -28,7 +28,7 @@ For all functions, amino acids in the sequences should be indicated as one-lette
 This function calculates the mass (Da) of a protein based on its amino acid sequence. As input, it takes a string of amino acids and returns the molecular weight in Da.
 Usage example:
 ```python
-aa_tools('MARY', 'amino_acid_substring') #593 (in Da)
+aa_tools('MARY', 'protein_mass') #593 (in Da)
 ```
 ### amino_acid_profile
 This function displays the proportion of hydrophobic, polar, negatively, and positively charged amino acids in the protein. It takes a string of amino acids, and returns a dictionary with the result.
