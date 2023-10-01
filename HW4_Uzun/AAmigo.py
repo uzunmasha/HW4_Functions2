@@ -29,7 +29,7 @@ def amino_acid_profile(seq: str):
     aa_biochemistry = dict(
         {'hydrophobic': ['G', 'A', 'V', 'L', 'I', 'P', 'F', 'M', 'W'], 'polar': ['S', 'T', 'C', 'N', 'Q', 'Y'],
          '- charged': ['E', 'D'], '+ charged': ['K', 'H', 'R']})
-    profile = dict({'hydrophobic': 0, 'polar': 0, '- charged': 0, '+ charged': 0})
+    profile = dict({'hydrophobic': 0.0, 'polar': 0.0, '- charged': 0.0, '+ charged': 0.0})
 
     for amino_acid in aa_seq:
         for group_name, group_list in aa_biochemistry.items():
