@@ -25,14 +25,17 @@ git clone https://github.com/uzunmasha/HW4_Functions2.git
 For all functions, amino acids in the sequences should be indicated as one-letter symbols. Letters can be uppercase or lowercase.
 
 ### protein_mass
-**Пример использования**
-
+This function calculates the mass (Da) of a protein based on its amino acid sequence. As input, it takes a string of amino acids and returns the molecular weight in Da.
+Usage example:
 ```python
-protein_mass('MARY') #593 (в Дальтонах)
+protein_mass('MARY') #593 (in Da)
+```
+### amino_acid_profile
+This function displays the proportion of hydrophobic, polar, negatively, and positively charged amino acids in the protein. It takes a string of amino acids, and returns a dictionary with the result.
+Usage example:
+```python
 aa_profile('EEKFG') #{'hydrophobic': 0.4, 'polar': 0.0, '- charged': 0.4, '+ charged': 0.2}
 ```
-### aa_profile
-
 ### amino_acid_substring 
 This function searches for the presence of particular amino acid(s) in the entire amino acid sequence. As input, it takes a string of amino acids and a substring that needs to be found. All sequences and subsequence should be comma-separated. Any number of amino acid sequences is possible. The searched substring should be one and it should be pointed last.  As an output, the function returns the position in the original sequence where the searched element was found for the first time.
 Usage example:
@@ -75,7 +78,6 @@ aa_tools('KKNNfF', 'KKFFRRVV', 'KK', 'essential_amino_acids') #[['K', 'K', 'f', 
 * Kristina Zhur - contributed to `'protein_length'` and `'essential_amino_acids'` functions.
 * Julia the Cat - team's emotional support.
 
-All team members contributed to README file according to the functions they developed.
 
 ![photo_2023-09-26_18-33-49_3](https://github.com/uzunmasha/HW4_Functions2/assets/44806106/63fdea24-5c0a-4650-8bed-181871aa540f)
 
