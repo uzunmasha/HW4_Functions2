@@ -11,8 +11,8 @@ def protein_mass(seq: str):
                             'G': 75, 'H': 155, 'I': 131, 'L': 131, 'K': 146, 'M': 149, 'F': 165, 'P': 115, 'S': 105,
                             'T': 119, 'W': 204, 'Y': 181, 'V': 117})
     mass = 0
-    for aa in aa_seq:
-        mass += mass_dictionary[aa]
+    for amino_acid in aa_seq:
+        mass += mass_dictionary[amino_acid]
 
     return mass
 
@@ -31,9 +31,9 @@ def amino_acid_profile(seq: str):
          '- charged': ['E', 'D'], '+ charged': ['K', 'H', 'R']})
     profile = dict({'hydrophobic': 0, 'polar': 0, '- charged': 0, '+ charged': 0})
 
-    for aa in aa_seq:
+    for amino_acid in aa_seq:
         for group_name, group_list in aa_biochemistry.items():
-            if aa in group_list:
+            if amino_acid in group_list:
                 profile[group_name] += 1
 
     for group, count in profile.items():
@@ -82,9 +82,10 @@ def amino_acid_count(seq: str):
     substring = aa_seq_upper[-1]
     results = []
     for sequences in amino_acids:
-        amino_acid_count = sequences.count(substring)
-        results.append(amino_acid_count)
+        aa_count = sequences.count(substring)
+        results.append(aa_count)
     return results
+
 
 def protein_length(*seq: str):
     """
@@ -178,4 +179,3 @@ def aa_tools(*args):
 
 
 aa_tools()
-
