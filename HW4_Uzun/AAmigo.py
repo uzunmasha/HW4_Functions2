@@ -6,7 +6,7 @@ def protein_mass(seq: str):
     Amino acids in the string should be indicated as one-letter symbols.
 
     """
-    aa_seq = list(seq)
+    aa_seq = list(seq.upper())
     mass_dictionary = dict({'A': 89, 'R': 174, 'N': 132, 'D': 133, 'C': 121, 'Q': 146, 'E': 147, 'Z': 147,
                             'G': 75, 'H': 155, 'I': 131, 'L': 131, 'K': 146, 'M': 149, 'F': 165, 'P': 115, 'S': 105,
                             'T': 119, 'W': 204, 'Y': 181, 'V': 117})
@@ -17,7 +17,7 @@ def protein_mass(seq: str):
     return mass
 
 
-def aa_profile(seq: str):
+def amino_acid_profile(seq: str):
     """
 
      Displays the proportion of hydrophobic, polar, negatively and positively charged amino acids in the protein.
@@ -25,7 +25,7 @@ def aa_profile(seq: str):
      Amino acids in the string should be indicated as one-letter symbols.
 
     """
-    aa_seq = list(seq)
+    aa_seq = list(seq.upper())
     aa_biochemistry = dict(
         {'hydrophobic': ['G', 'A', 'V', 'L', 'I', 'P', 'F', 'M', 'W'], 'polar': ['S', 'T', 'C', 'N', 'Q', 'Y'],
          '- charged': ['E', 'D'], '+ charged': ['K', 'H', 'R']})
