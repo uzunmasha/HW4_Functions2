@@ -74,7 +74,7 @@ aa_tools('KKNNfF', 'KKFFRRVV', 'KK', 'essential_amino_acids') #[['K', 'K', 'f', 
 
 ## Developers and contacts
 * Maria Uzun - contributed to `'amino_acid_substring'`, `'amino_acid_count'`, and `'aa_tools'` functions.
-* Maria Babaeva - contributed to `'protein_mass'` and `'aa_profile'` functions.
+* Maria Babaeva - contributed to `'protein_mass'` and `'amino_acid_profile'` functions.
 * Kristina Zhur - contributed to `'protein_length'` and `'essential_amino_acids'` functions.
 * Julia the Cat - team's emotional support.
 
